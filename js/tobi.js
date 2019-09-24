@@ -312,6 +312,13 @@
             iframe.style.maxHeight = el.getAttribute('data-height') + 'px'
           }
 
+          if (el.getAttribute('data-allowfullscreen')) {
+            iframe.setAttribute('allowfullscreen', 'allowfullscreen')
+          }
+          if (el.getAttribute('data-allow')) {
+            iframe.setAttribute('allow', el.getAttribute('data-allow'))
+          }
+          
           // Add iframe to container
           container.appendChild(iframe)
 
